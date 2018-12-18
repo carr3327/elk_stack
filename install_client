@@ -1,0 +1,11 @@
+apt-get update
+apt-get upgrade
+apt-get install curl vim ssh
+systemctl start ssh
+systemctl enable ssh
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.5.1-amd64.deb
+sudo dpkg -i filebeat-6.5.1-amd64.deb
+cp filebeat.yml /etc/filebeat/filebeat.yml
+systemctl start filebeat
+systemctl enable filebeat
+echo 'scp root@elk-server:/etc/logstash/logstash.crt .'
