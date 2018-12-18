@@ -1,6 +1,6 @@
 apt-get update -y 
 apt-get upgrade -y 
-add-apt-get-repository ppa:webupd8team/java -y
+add-apt-repository ppa:webupd8team/java
 apt-get update -y 
 apt-get install -y oracle-java8-installer 
 apt-get install curl
