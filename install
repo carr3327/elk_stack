@@ -10,7 +10,7 @@ apt-get update -y;
 apt-get install -y elasticsearch;
 sed -i 's/\#bootstrap\.memory\_lock:/bootstrap.memory_lock:/' /etc/elasticsearch/elasticsearch.yml
 sed -i 's/\#network\.host\: 192.168.0.1/network.host: localhost/' /etc/elasticsearch/elasticsearch.yml
-sed -i 's/\#http\.port\: 9200/http.port: 9200/' /etc/elasticsearch/el
+sed -i 's/\#http\.port\: 9200/http.port: 9200/' /etc/elasticsearch/elasticsearch.yml
 echo LimitMEMLOCK=infinity >> /usr/lib/systemd/system/elasticsearch.service
 sed -i 's/\#MAX\_LOCKED\_MEMORY/MAX_LOCKED_MEMORY/'
 systemctl daemon-reload
